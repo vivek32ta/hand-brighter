@@ -641,7 +641,8 @@ ir.oninput = () => (r => {
 }
 )(tr);
 var ur, fr, sr = r => r.toFixed(2), hr = r => r.toFixed(3);
-ur = "",
+//ur = "https://d33au9p5d8tjhf.cloudfront.net/d.bin",
+
     fr = (() => {
         var r = 0
             , e = [" ", ".", "..", "..", "..."]
@@ -653,7 +654,7 @@ ur = "",
             , 200)
     }
     )(),
-    fetch(ur).then(r => r.arrayBuffer()).then(r => {
+    fetch("./model.bin").then((r)=>{return r.arrayBuffer()}).then(r => {
         $ = (r => {
             var e = 0
                 , t = {}
